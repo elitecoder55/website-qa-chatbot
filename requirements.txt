@@ -1,0 +1,10 @@
+streamlit
+beautifulsoup4
+requests
+sentence-transformers
+faiss-cpu
+numpy<2.0.0
+langchain-text-splitters
+langchain-groq
+langchain-core
+lxml
