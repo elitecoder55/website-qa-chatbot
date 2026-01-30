@@ -10,9 +10,6 @@ An AI-powered question-answering chatbot that crawls websites, creates embedding
 - [Technology Stack](#technology-stack)
 - [Setup Instructions](#setup-instructions)
 - [Usage Guide](#usage-guide)
-- [Design Decisions](#design-decisions)
-- [Limitations & Future Improvements](#limitations--future-improvements)
-- [Project Structure](#project-structure)
 
 ## 🎯 Overview
 
@@ -315,56 +312,6 @@ For this project size and requirements, FAISS is optimal.
 6. **Language**: Optimized for English content
    - *Future*: Multi-language support with language detection
 
-### Planned Improvements
-
-**Short-term:**
-- [ ] Add PDF and document support
-- [ ] Implement Redis for session management
-- [ ] Add conversation export feature
-- [ ] Enhanced error messages and debugging
-
-**Medium-term:**
-- [ ] Multi-website comparison queries
-- [ ] Advanced filters (date, domain, content type)
-- [ ] User feedback loop for answer quality
-- [ ] Analytics dashboard
-
-**Long-term:**
-- [ ] Fine-tuned domain-specific models
-- [ ] Real-time website monitoring
-- [ ] API endpoint for programmatic access
-- [ ] Multi-modal support (images, videos)
-
-### Known Issues
-
-1. JavaScript-heavy websites may not render fully
-   - *Workaround*: Use Selenium/Playwright for JS rendering
-   
-2. Very large websites may timeout
-   - *Workaround*: Increase timeout or reduce max pages
-
-3. Some websites block crawlers
-   - *Workaround*: Add custom headers, respect robots.txt
-
-## 📁 Project Structure
-
-```
-website-qa-chatbot/
-│
-├── app.py                  # Main Streamlit application
-├── requirements.txt        # Python dependencies
-├── README.md              # This file
-├── .env.example           # Environment variables template
-├── .gitignore            # Git ignore rules
-│
-├── vector_store/         # Persistent vector storage (created at runtime)
-│   ├── index.faiss       # FAISS index file
-│   └── chunks.pkl        # Serialized text chunks
-│
-└── docs/                 # Additional documentation
-    ├── ARCHITECTURE.md   # Detailed architecture
-    └── API.md           # API documentation (future)
-```
 
 ## 🔑 Environment Variables
 
@@ -418,35 +365,7 @@ Q: "What is quantum computing?" (should return unavailable)
 - LLM generation: ~1-2 seconds
 - **Total**: ~1.5-2.5 seconds per query
 
-## 🤝 Contributing
-
-This is an assignment project, but improvements are welcome!
-
-1. Fork the repository
-2. Create a feature branch
-3. Make your changes
-4. Submit a pull request
-
 ## 📄 License
 
 MIT License - feel free to use for learning and projects
 
-## 👤 Author
-
-Created for Humanli.ai AI/ML Engineer Assignment
-
-## 🙏 Acknowledgments
-
-- LangChain for excellent text processing tools
-- Sentence Transformers for efficient embeddings
-- FAISS for fast similarity search
-- Streamlit for rapid UI development
-- OpenAI for powerful language models
-
----
-
-**Submission Date**: January 30, 2026  
-**Assignment Duration**: 2-3 Days  
-**Status**: ✅ Complete
-
-For questions or issues, please open a GitHub issue or contact via the submission form.
